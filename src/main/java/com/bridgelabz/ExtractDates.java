@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class ExtractDates {
     static void printDateMatches(String input){
-        String regex = "[0-9]{2}/[0-9]{2}/[0-9]{4}";
+        String regex = "(?:0[1-9]|[1-2][0-9]|3[01])/(?:0[1-9]|1[0-2])/[0-9]{4}";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
 
